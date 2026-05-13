@@ -1,0 +1,706 @@
+/* ═══════════════════════════════════════════════
+   IPLMind — PREMIUM FOOTER STYLES
+   Theme-aware: Light / Dark / IPL Stadium
+   ═══════════════════════════════════════════════ */
+
+/* ── Base Footer ── */
+.iplmind-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  z-index: 10;
+}
+
+/* ── Animated Top Divider ── */
+.footer-divider-wrap {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-divider-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--border, rgba(21, 33, 31, 0.1));
+}
+
+.footer-divider-glow {
+  position: absolute;
+  top: -1px;
+  width: 30%;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, transparent, var(--accent, #fd8100), transparent);
+  filter: blur(1px);
+}
+
+/* ── Footer Content Grid ── */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 32px 32px;
+}
+
+/* ── Section Title ── */
+.footer-section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+  color: var(--text-muted, #414942);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--accent, #fd8100);
+}
+
+/* ── SECTION A: Branding ── */
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary, #00361a);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.footer-cricket-ball {
+  font-size: 22px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+}
+
+.footer-tagline {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent, #fd8100);
+  margin: 4px 0 0;
+  letter-spacing: 0.01em;
+}
+
+.footer-tagline-sub {
+  font-size: 13px;
+  color: var(--text-hint, #717971);
+  line-height: 1.5;
+  margin: 2px 0 0;
+  max-width: 280px;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--accent, #fd8100), var(--accent-dark, #954a00));
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px -4px rgba(253, 129, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  width: fit-content;
+}
+
+.footer-cta-btn:hover {
+  box-shadow: 0 6px 24px -4px rgba(253, 129, 0, 0.45);
+}
+
+/* ── SECTION B: Quick Links ── */
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  margin-left: -10px;
+  border-radius: 8px;
+  color: var(--text-muted, #414942);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent, #fd8100);
+  background: rgba(253, 129, 0, 0.06);
+  transform: translateX(4px);
+}
+
+.footer-link-icon {
+  color: var(--text-hint, #717971);
+  transition: color 0.2s;
+}
+
+.footer-link:hover .footer-link-icon {
+  color: var(--accent, #fd8100);
+}
+
+/* ── SECTION C: Features ── */
+.footer-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted, #414942);
+  transition: color 0.2s;
+}
+
+.footer-feature-item:hover {
+  color: var(--primary, #00361a);
+}
+
+.footer-feature-icon {
+  color: var(--accent, #fd8100);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-feature-item:hover .footer-feature-icon {
+  opacity: 1;
+}
+
+/* ── SECTION D: Tech Stack ── */
+.footer-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--chip-bg, rgba(0, 0, 0, 0.05));
+  color: var(--chip-color, #414942);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.footer-tech-chip:hover {
+  box-shadow: 0 2px 12px -2px var(--chip-bg, rgba(0, 0, 0, 0.1));
+}
+
+.footer-tech-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Social Row ── */
+.footer-social-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 32px 24px;
+}
+
+.footer-social-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  color: var(--text-muted, #414942);
+  background: var(--bg-card, rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--border, rgba(21, 33, 31, 0.08));
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.footer-social-btn:hover {
+  color: var(--accent, #fd8100);
+  border-color: var(--accent, #fd8100);
+  box-shadow: 0 0 16px rgba(253, 129, 0, 0.15);
+  background: rgba(253, 129, 0, 0.04);
+}
+
+/* ── Copyright Strip ── */
+.footer-copyright {
+  border-top: 1px solid var(--border, rgba(21, 33, 31, 0.08));
+  padding: 16px 32px;
+}
+
+.footer-copyright-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copyright-text {
+  font-size: 12px;
+  color: var(--text-hint, #717971);
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-hackathon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: rgba(253, 129, 0, 0.08);
+  color: var(--accent, #fd8100);
+  border: 1px solid rgba(253, 129, 0, 0.15);
+}
+
+
+/* ═══════════════════════════════════════════════
+   LIGHT THEME (default)
+   ═══════════════════════════════════════════════ */
+.iplmind-footer.theme-light {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(29, 80, 49, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(253, 129, 0, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, #f3f4ef 0%, #edeee9 100%);
+}
+
+.theme-light .footer-social-btn {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+
+/* ═══════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════ */
+.iplmind-footer.theme-dark {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(125, 216, 154, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 155, 46, 0.02) 0%, transparent 50%),
+    linear-gradient(180deg, #141816 0%, #0f1210 100%);
+}
+
+.theme-dark .footer-logo {
+  color: var(--primary, #7dd89a);
+}
+
+.theme-dark .footer-divider-wrap::before {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.theme-dark .footer-divider-glow {
+  background: linear-gradient(90deg, transparent, #7dd89a, transparent);
+}
+
+.theme-dark .footer-section-title {
+  color: var(--text-muted, #a8b0a8);
+}
+
+.theme-dark .footer-section-title::after {
+  background: var(--accent, #ff9b2e);
+}
+
+.theme-dark .footer-link:hover {
+  background: rgba(125, 216, 154, 0.06);
+}
+
+.theme-dark .footer-feature-item:hover {
+  color: var(--primary, #7dd89a);
+}
+
+.theme-dark .footer-tech-chip {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.theme-dark .footer-social-btn {
+  background: rgba(30, 36, 32, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.theme-dark .footer-social-btn:hover {
+  color: #ff9b2e;
+  border-color: rgba(255, 155, 46, 0.4);
+  box-shadow: 0 0 20px rgba(255, 155, 46, 0.15);
+  background: rgba(255, 155, 46, 0.06);
+}
+
+.theme-dark .footer-copyright {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.theme-dark .footer-hackathon-badge {
+  background: rgba(255, 155, 46, 0.08);
+  border-color: rgba(255, 155, 46, 0.15);
+  color: #ff9b2e;
+}
+
+
+/* ═══════════════════════════════════════════════
+   IPL STADIUM THEME — Premium Neon Sports-Tech
+   ═══════════════════════════════════════════════ */
+.iplmind-footer.theme-ipl {
+  background:
+    radial-gradient(ellipse at 30% 80%, rgba(100, 80, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 20%, rgba(255, 140, 0, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0d0820 0%, #0a0a1a 100%);
+}
+
+.theme-ipl .footer-logo {
+  background: linear-gradient(135deg, #c084fc, #818cf8, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.theme-ipl .footer-divider-wrap::before {
+  background: rgba(100, 80, 255, 0.15);
+}
+
+.theme-ipl .footer-divider-glow {
+  background: linear-gradient(90deg, transparent, #c084fc, #ff8c00, transparent);
+  height: 2px;
+  filter: blur(0px);
+}
+
+.theme-ipl .footer-tagline {
+  color: #c084fc;
+}
+
+.theme-ipl .footer-tagline-sub {
+  color: rgba(200, 200, 255, 0.4);
+}
+
+.theme-ipl .footer-cta-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff5500);
+  box-shadow: 0 4px 20px rgba(255, 140, 0, 0.3);
+}
+
+.theme-ipl .footer-cta-btn:hover {
+  box-shadow: 0 6px 30px rgba(255, 140, 0, 0.45);
+}
+
+.theme-ipl .footer-section-title {
+  color: rgba(200, 200, 255, 0.5);
+}
+
+.theme-ipl .footer-section-title::after {
+  background: linear-gradient(90deg, #c084fc, #ff8c00);
+}
+
+.theme-ipl .footer-link {
+  color: rgba(200, 200, 255, 0.5);
+}
+
+.theme-ipl .footer-link:hover {
+  color: #c084fc;
+  background: rgba(192, 132, 252, 0.08);
+}
+
+.theme-ipl .footer-link-icon {
+  color: rgba(200, 200, 255, 0.3);
+}
+
+.theme-ipl .footer-link:hover .footer-link-icon {
+  color: #c084fc;
+}
+
+.theme-ipl .footer-feature-item {
+  color: rgba(200, 200, 255, 0.45);
+}
+
+.theme-ipl .footer-feature-item:hover {
+  color: rgba(220, 220, 255, 0.9);
+}
+
+.theme-ipl .footer-feature-icon {
+  color: #818cf8;
+}
+
+.theme-ipl .footer-tech-chip {
+  border-color: rgba(100, 80, 255, 0.12);
+  background: rgba(100, 80, 255, 0.06);
+}
+
+.theme-ipl .footer-tech-chip:hover {
+  border-color: rgba(100, 80, 255, 0.25);
+  box-shadow: 0 0 12px rgba(100, 80, 255, 0.1);
+}
+
+.theme-ipl .footer-social-btn {
+  background: rgba(15, 12, 40, 0.6);
+  border-color: rgba(100, 80, 255, 0.15);
+  color: rgba(200, 200, 255, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+.theme-ipl .footer-social-btn:hover {
+  color: #c084fc;
+  border-color: rgba(192, 132, 252, 0.5);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.2), 0 0 40px rgba(192, 132, 252, 0.05);
+  background: rgba(192, 132, 252, 0.08);
+}
+
+.theme-ipl .footer-copyright {
+  border-color: rgba(100, 80, 255, 0.1);
+}
+
+.theme-ipl .footer-copyright-text {
+  color: rgba(200, 200, 255, 0.3);
+}
+
+.theme-ipl .footer-hackathon-badge {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.2);
+  color: #c084fc;
+}
+
+.theme-ipl .footer-cricket-ball {
+  filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.3));
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — TABLET ≤ 1024px
+   ═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 24px 28px;
+  }
+
+  .footer-branding {
+    grid-column: span 2;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — MOBILE ≤ 768px
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 20px 24px;
+  }
+
+  .footer-branding {
+    grid-column: span 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-logo-row {
+    justify-content: center;
+  }
+
+  .footer-tagline-sub {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-cta-btn {
+    align-self: center;
+  }
+
+  .footer-section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-link-list {
+    align-items: center;
+  }
+
+  .footer-link {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .footer-feature-list {
+    align-items: center;
+  }
+
+  .footer-feature-item {
+    justify-content: center;
+  }
+
+  .footer-tech-grid {
+    justify-content: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-social-row {
+    padding: 0 20px 20px;
+  }
+
+  .footer-social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .footer-copyright {
+    padding: 14px 20px;
+  }
+
+  .footer-copyright-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-copyright-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-hackathon-badge {
+    margin: 0 auto;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — SMALL PHONES ≤ 380px
+   ═══════════════════════════════════════════════ */
+@media (max-width: 380px) {
+  .footer-content {
+    padding: 24px 16px 20px;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+  }
+
+  .footer-tagline-sub {
+    font-size: 11px;
+  }
+
+  .footer-section-title {
+    font-size: 11px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .footer-feature-item {
+    font-size: 11px;
+  }
+
+  .footer-tech-chip {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .footer-social-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer-copyright-text {
+    font-size: 11px;
+  }
+
+  .footer-hackathon-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   ACCESSIBILITY — Focus States
+   ═══════════════════════════════════════════════ */
+.footer-link:focus-visible,
+.footer-social-btn:focus-visible,
+.footer-cta-btn:focus-visible {
+  outline: 2px solid var(--accent, #fd8100);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .footer-divider-glow,
+  .footer-cricket-ball {
+    animation: none !important;
+  }
+}

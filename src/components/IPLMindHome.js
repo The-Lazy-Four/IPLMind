@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import ThemeSwitcher from './ThemeSwitcher';
 import { useTheme } from './ThemeProvider';
+import Footer from './Footer';
 
 const HOME_BG = {
   light: 'radial-gradient(circle at top right, rgba(29, 80, 49, 0.15) 0%, transparent 70%), radial-gradient(circle at bottom left, rgba(253, 129, 0, 0.1) 0%, transparent 60%), #f8faf5',
@@ -522,10 +523,8 @@ export default function IPLMindHome({ onStartGame }) {
         </section>
       </main>
 
-      {/* Spacer */}
-      <div style={{ height: 48 }} />
-
-      {/* Responsive CSS is in globals.css */}
+      {/* Footer Section */}
+      <Footer onStartGame={onStartGame} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./mobile.css";
 import "./ipl-stadium.css";
+import "./footer.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 

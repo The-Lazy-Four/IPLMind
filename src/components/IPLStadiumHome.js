@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
+import Footer from "./Footer";
 
 // ═══════════════════════════════════════════════
 // FLOATING CRICKET OBJECTS — lightweight pseudo-3D
@@ -467,6 +468,8 @@ export default function IPLStadiumHome({ onStartGame }) {
           <div style={{ position: "absolute", bottom: 60, right: 30, width: 40, height: 40, borderRight: "2px solid rgba(255,140,0,0.1)", borderBottom: "2px solid rgba(255,140,0,0.1)", pointerEvents: "none", zIndex: 1 }} />
         </>
       )}
+      {/* Footer Section */}
+      <Footer onStartGame={onStartGame} />
     </div>
   );
 }

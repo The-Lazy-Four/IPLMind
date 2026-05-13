@@ -1,4 +1,5 @@
 import LeaderboardClient from "@/components/LeaderboardClient";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Leaderboard | IPLMind",
@@ -7,8 +8,11 @@ export const metadata = {
 
 export default function LeaderboardPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white" data-theme="ipl">
-      <LeaderboardClient />
+    <div className="min-h-screen flex flex-col" data-theme="ipl">
+      <main className="flex-grow">
+        <LeaderboardClient />
+      </main>
+      <Footer />
     </div>
   );
 }
